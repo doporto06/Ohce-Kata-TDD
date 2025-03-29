@@ -17,10 +17,12 @@ class Ohce:
 
     def process_input(self, input):
         if input == "Stop!":
-            print(f"Adios {self.name}")
+            msg = f"Adios {self.name}"
+            print(msg)
             sys.exit(0)
-            return f"Adios {self.name}" # When running the script normally (outside of tests), this line will not be reached. In tests, 'sys.exit' is mocked, so that the test passes.
-        if input == input[::-1]:
-            return f"{input}\n¡Bonita palabra!"
-        else:
-            return input[::-1]
+            return msg # When running the script normally (outside of tests), this line will not be reached. In tests, 'sys.exit' is mocked, so that the test passes.
+        
+        reversed_input = input[::-1]
+        if input == reversed_input:
+            return f"{reversed_input}\n¡Bonita palabra!"
+        return reversed_input
