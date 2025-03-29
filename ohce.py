@@ -15,6 +15,8 @@ class Ohce:
 
     def process_input(self, input):
         if input == "oto":
-            return "oto\n¡Bonita palabra!"
+            return f"oto\n¡Bonita palabra!"
+        elif input == "":
+            return "\n¡Bonita palabra!"
         else:
             return input[::-1]
