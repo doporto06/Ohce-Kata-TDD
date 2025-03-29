@@ -6,6 +6,12 @@ def test_reverse_string():
     ohce = Ohce("Diego", datetime.datetime(2025, 3, 28, 9, 0, 0))
     assert ohce.process_input("hola") == "aloh"
 
+def test_palindrome():
+    ohce = Ohce("Diego", datetime.datetime(2025, 3, 28, 9, 0, 0))
+    assert ohce.process_input("oto") == "oto\n¡Bonita palabra!"
+
+
+
 
 ### Test cases for the greetings based on the time of day ###
 # Morning tests
