@@ -1,7 +1,10 @@
 import pytest
 import datetime
 from ohce import Ohce
+from pytest_mock import mocker
+import sys
 
+### Test cases for reversing the input and palindromes ###
 def test_reverse_string():
     ohce = Ohce("Diego", datetime.datetime(2025, 3, 28, 9, 0, 0))
     assert ohce.process_input("hola") == "aloh"
@@ -14,7 +17,12 @@ def test_palindrome_edge():
     ohce = Ohce("Diego", datetime.datetime(2025, 3, 28, 9, 0, 0))
     assert ohce.process_input("") == "\n¡Bonita palabra!"
 
-
+### Test case for the stop command ###
+def test_stop(mocker):
+    ohce = Ohce("Diego", datetime.datetime(2025, 3, 28, 9, 0, 0))
+    mocker.patch('sys.exit') # Mock sys.exit to prevent the script from exiting
+    assert ohce.process_input("Stop!") == "Adios Diego"
+    sys.exit.assert_called_once_with(0)
 
 ### Test cases for the greetings based on the time of day ###
 # Morning tests
