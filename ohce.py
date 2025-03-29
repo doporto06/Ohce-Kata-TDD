@@ -8,7 +8,7 @@ class Ohce:
         name = self.name
         if 6 <= hour < 12:
             return f"¡Buenos días {name}!"
-        elif hour == 15:
+        elif hour == 15 or hour == 12:
             return f"¡Buenas tardes {name}!"
 
     def process_input(self):
