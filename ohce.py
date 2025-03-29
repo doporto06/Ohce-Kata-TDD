@@ -14,4 +14,4 @@ class Ohce:
             return f"¡Buenas noches {name}!"
 
     def process_input(self, input):
-        return "aloh"
+        return input[::-1]
