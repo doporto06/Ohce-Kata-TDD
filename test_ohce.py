@@ -38,3 +38,7 @@ def test_greeting_night():
 def test_greeting_night_edge1():
     ohce = Ohce("Diego", datetime.datetime(2025, 3, 28, 20, 0, 0))
     assert ohce.greet() == "¡Buenas noches Diego!"
+
+def test_greeting_night_edge2():
+    ohce = Ohce("Diego", datetime.datetime(2025, 3, 28, 5, 59, 0))
+    assert ohce.greet() == "¡Buenas noches Diego!"
