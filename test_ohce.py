@@ -13,6 +13,10 @@ def test_palindrome():
     ohce = Ohce("Diego", datetime.datetime(2025, 3, 28, 9, 0, 0))
     assert ohce.process_input("oto") == "oto\n¡Bonita palabra!"
 
+def test_palindrome2():
+    ohce = Ohce("Diego", datetime.datetime(2025, 3, 28, 9, 0, 0))
+    assert ohce.process_input("a") == "a\n¡Bonita palabra!"
+
 def test_palindrome_edge():
     ohce = Ohce("Diego", datetime.datetime(2025, 3, 28, 9, 0, 0))
     assert ohce.process_input("") == "\n¡Bonita palabra!"
@@ -65,3 +69,14 @@ def test_greeting_night_edge1():
 def test_greeting_night_edge2():
     ohce = Ohce("Diego", datetime.datetime(2025, 3, 28, 5, 59, 0))
     assert ohce.greet() == "¡Buenas noches Diego!"
+
+
+### Test cases for different names ###
+def test_greeting_empty():
+    ohce = Ohce("", datetime.datetime(2025, 3, 28, 9, 0, 0))
+    assert ohce.greet() == "¡Buenos días !"
+
+def test_greeting_empty():
+    ohce = Ohce(" ", datetime.datetime(2025, 3, 28, 9, 0, 0))
+    assert ohce.greet() == "¡Buenos días  !"
+
