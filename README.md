@@ -7,7 +7,7 @@
 - pytest
 - pytest-mock
 
-Para instalar pytest y pytest-mocker, ejecutar los siguientes comandos en la terminal:
+Para instalar `pytest` y `pytest-mock`, ejecutar los siguientes comandos en la terminal:
 ```bash
 pip install pytest
 pip install pytest-mock
