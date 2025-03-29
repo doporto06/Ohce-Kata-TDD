@@ -10,6 +10,9 @@ def test_palindrome():
     ohce = Ohce("Diego", datetime.datetime(2025, 3, 28, 9, 0, 0))
     assert ohce.process_input("oto") == "oto\n¡Bonita palabra!"
 
+def test_palindrome_edge():
+    ohce = Ohce("Diego", datetime.datetime(2025, 3, 28, 9, 0, 0))
+    assert ohce.process_input("") == "\n¡Bonita palabra!"
 
 
 
