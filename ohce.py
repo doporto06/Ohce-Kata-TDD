@@ -5,7 +5,7 @@ class Ohce:
 
     def greet(self):
         hour = self.time.hour
-        if hour == 9:
+        if hour == 6 or hour == 9:
             return "¡Buenos días Diego!"
 
     def process_input(self):
