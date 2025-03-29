@@ -13,5 +13,5 @@ class Ohce:
         elif 20 <= hour or hour < 6:
             return f"¡Buenas noches {name}!"
 
-    def process_input(self):
-        pass
+    def process_input(self, input):
+        return "aloh"
