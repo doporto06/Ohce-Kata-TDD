@@ -10,7 +10,7 @@ class Ohce:
             return f"¡Buenos días {name}!"
         elif 12 <= hour < 20:
             return f"¡Buenas tardes {name}!"
-        elif hour == 4 or hour == 20:
+        elif hour == 4 or hour == 20 or (hour == 5 and self.time.minute == 59):
             return f"¡Buenas noches {name}!"
 
     def process_input(self):
