@@ -76,7 +76,7 @@ def test_greeting_empty():
     ohce = Ohce("", datetime.datetime(2025, 3, 28, 9, 0, 0))
     assert ohce.greet() == "¡Buenos días !"
 
-def test_greeting_empty():
+def test_greeting_space():
     ohce = Ohce(" ", datetime.datetime(2025, 3, 28, 9, 0, 0))
     assert ohce.greet() == "¡Buenos días  !"
 
